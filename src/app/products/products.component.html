@@ -1,0 +1,58 @@
+<p>
+	
+	
+</p>
+<main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Album example</h1>
+          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-4" *ngFor="let product of products">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top img-fluid" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="{{product.img}}" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text"> Name:{{product.name}} <br/>
+				 		Gia:{{product.priceOld}}</p>
+				 		<p class="card-text"> {{ product.status == 1  ? 'còn hàng' : 'hết hàng' }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <!-- <button type="button" class="btn btn-sm btn-outline-secondary" (click)="onClickMe($event)" >View</button> -->
+                      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="detailProduct(product)" >View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="deleteProduct(product.id)" >delete</button>
+                     <!--  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                      
+                    </div>
+
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+                <input type="text" class="form-control" (keyup)=onKeyUp($event)> 
+                <input type="text" class="form-control" [(ngModel)]="product.name"> 
+                <select name="" id="" [(ngModel)]="product.status">
+                  <option value="0">hết hàng</option>
+                  <option value="1">còn hàng</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <!-- <div *ngIf="products">
+            <h1>view</h1>
+            {{selectedProduct.name}}  {{selectedProduct.priceOld}}
+          </div> -->
+        </div>
+      </div>
+
+    </main>
