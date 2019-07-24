@@ -20,10 +20,9 @@
 <div class="container">
   <app-header></app-header>
   <app-products></app-products>
-
-<footer class="text-center py-3">
-  <p class="m-0">Coppuright</p>
-</footer>
+<app-add-product (keyAddress)="getAddress($event)" ></app-add-product>
+  <footer class="text-center py-3">
+    <p class="m-0">Coppuright</p>
+  </footer>
 </div>
-
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
