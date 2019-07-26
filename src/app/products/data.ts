@@ -7,7 +7,8 @@ export  const DataProduct : ProductType[] = [{
 	status: 1,
 	img: 'http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg',
 
-},{
+},
+{
 	
 	id :2,
 	name: 'Product2',
@@ -15,7 +16,8 @@ export  const DataProduct : ProductType[] = [{
 	status: 1,
 	img: 'http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg',
 
-},{
+},
+{
 	
 	id :3,
 	name: 'Product3',
